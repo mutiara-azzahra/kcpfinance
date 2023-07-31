@@ -151,7 +151,7 @@
 
 @section('script')
 
-<script>
+    <script>
       $(function () {
         $("#example1")
           .DataTable({
