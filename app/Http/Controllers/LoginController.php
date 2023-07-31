@@ -36,12 +36,15 @@ class LoginController extends Controller
         if ($user) {
 
         Auth::login($user);
+
+        session()->flash('fullname', $user->fullname);
+
         return redirect('/dashboard');
 
         } else {
 
         return redirect('/login')->with('danger', 'Username atau password salah!');
-    }
+        }
 
     }
 

@@ -257,7 +257,7 @@
       <!-- Main Sidebar Container -->
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="index3.html" class="brand-link">
+        <a href="" class="brand-link">
           <img
             src="{{ asset('dist/img/AdminLTELogo.png')}}"
             alt="AdminLTE Logo"
@@ -279,7 +279,11 @@
               />
             </div>
             <div class="info">
-              <a href="#" class="d-block">Halo, User</a>
+              <a href="#" class="d-block">Halo,
+                @if (Auth::check())
+                    Welcome, {{ session('fullname') }}
+                @endif
+              </a>
             </div>
           </div>
 
@@ -390,11 +394,8 @@
                     </li>
 
                     <li class="nav">
-                      <a class="nav-link" href="{{ Route('login.logout')}}" class="nav-link">
-                        <p>
-                          Logout
-                          <i class="right fas fa-angle-left"></i>
-                        </p>
+                      <a class="nav-link" href="{{ Route('login.logout')}}" class="nav-link"><i class="fas fa-arrow-right"></i>
+                        <p>Logout</p>
                       </a>
                     </li>
                 </ul>

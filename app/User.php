@@ -10,7 +10,7 @@ class User extends Authenticatable
     use Notifiable;
 
     public $timestamps = false;
-    public $table = 'user';
+    protected $table = 'user';
 
     /**
      * The attributes that are mass assignable.
