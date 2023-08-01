@@ -27,5 +27,10 @@ class MasterBarangController extends Controller
         return view('barang.detail', compact('barang', 'detailBarang'));
     }
 
+    public function viewUpload(){
+
+        return view('barang.upload');
+    }
+
     
 }

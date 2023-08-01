@@ -8,8 +8,7 @@
                 <h4><b>Master Barang</b></h4>
             </div>
             <div class="float-right">
-                <!-- <a class="btn btn-success" href=""><i class="fas fa-plus"></i> Tambah Persediaan Baru</a>
-                <a class="btn btn-warning" href=""><i class="fas fa-print"></i> Export</a> -->
+                <a class="btn btn-warning" href="{{ route('barang.viewUpload')}}"><i class="fas fa-upload"></i> Import DBP Barang</a>
             </div>
             
         </div>
@@ -21,37 +20,7 @@
     </div>
     @endif
 
-    <div class="col">
-      <!-- <div class="card" style="padding: 20px;">
-        <div class="col"> -->
-            <!-- <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Bulan</label>
-                      <select class="form-control select2" style="width: 100%">
-                        <option selected="selected">-- Pilih Bulan --</option>
-                        <option>Januari</option>
-                        <option>Februari</option>
-                      </select>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Tahun</label>
-                      <select class="form-control select2" style="width: 100%">
-                        <option selected="selected">-- Pilih Tahun --</option>
-                        <option>2023</option>
-                      </select>
-                    </div>
-                </div>
-          </div> -->
-
-          <!-- <div class="float-right pt-2">
-            <button class="btn btn-warning" type="submit"><i class="fas fa-eye"></i> Tampil</button>
-          </div> -->
-        <!-- </div>   
-      </div> -->
-        
+    <div class="col">        
         <div class="card" style="padding: 20px;">
             <div class="col">
                     <div class="col-lg-12">
@@ -76,10 +45,9 @@
                                 <td>{{ $j->part_no }}</td>
                                 <td>{{ $j->level->level4 }}</td>
                                 <td>{{ $j->part->kode }}</td>
-                                
                                
                                 <td class="text-center">
-                                    <a class="btn btn-warning btn-sm" href="{{ Route('barang.detail',$j->id) }}"><i class="fas fa-eye"></i></a>
+                                    <a class="btn btn-primary btn-sm" href="{{ Route('barang.detail',$j->id) }}"><i class="fas fa-info"></i></a>
                                 </td>
                             </tr>
                             @endforeach

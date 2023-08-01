@@ -88,6 +88,7 @@ Route::get('/barang/create', 'MasterBarangController@create')->name('barang.crea
 Route::get('/barang/edit', 'MasterBarangController@edit')->name('barang.edit');
 Route::get('/barang/destroy', 'MasterBarangController@destroy')->name('barang.destroy');
 Route::get('/barang/detail/{id}', 'MasterBarangController@detail')->name('barang.detail');
+Route::get('/barang/upload', 'MasterBarangController@viewUpload')->name('barang.viewUpload');
 
 //LevelController
 Route::get('/level/index', 'MasterLevelController@index')->name('level.index');
