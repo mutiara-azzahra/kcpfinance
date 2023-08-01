@@ -20,26 +20,29 @@
     </div>
     @endif
 
-    <div class="col">        
-        <div class="card" style="padding: 20px;">
-            <div class="col">
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <form action="">
-                                    <div class="row">
-                                        <input type="file" id="myFile" name="filename">
-                                        <input type="submit">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+    <div class="card" style="padding: 30px;">
+        <form action="" method="POST">
+        
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Tambahkan File</strong>
                     </div>
                 </div>
-
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <input type="file" id="myFile" name="filename">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <div class="float-left">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                    </div>
+                </div>
             </div>
-        </div>
-
+        
+        </form>
+    </div>
 </div> 
 @endsection
 
