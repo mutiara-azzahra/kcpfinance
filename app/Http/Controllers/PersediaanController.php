@@ -52,19 +52,14 @@ class PersediaanController extends Controller
         
         $pembelian = $getAmountPembelian->sum('amount_ex_disc');
 
-        //dd($pembelian);
-
         //RETUR AOP
         $getReturAOP = ReturAOPDetails::whereBetween('crea_date', [$tanggal_awal, $tanggal_akhir])->where('kd_gudang_aop', $kcp)->get();
-
 
         $retur_aop = 0;
 
         foreach ($getReturAOP as $item) {
             $retur_aop += $item->qty * $item->price;
         }
-
-        //dd($retur_aop);
 
         //PENJUALAN KE TOKO
         $getPenjualan = TransaksiInvoiceDetails::whereBetween('crea_date', [$tanggal_awal, $tanggal_akhir])->where('area_inv', $kd)->get();
@@ -88,7 +83,6 @@ class PersediaanController extends Controller
         
         //PILIH PERSEDIAAN AKHHIR BULAN SEBELUMNYA
         $bulan_prev = $tanggal->subMonth()->format('m');
-        //dd($bulan_prev);
 
         $getNilaiPersediaan = NilaiPersediaan::where('bulan', $bulan)->get();
 
@@ -136,11 +130,8 @@ class PersediaanController extends Controller
             $data['persediaan_akhir']       = $persediaan_awal_next + $pembelian - $retur_aop - $modal_terjual + $retur_toko ;
             $data['status']                 = 'Y';
             $data['crea_date']              = Carbon::now();
-
-          // dd($data);
             
             NilaiPersediaan::create($data);
-
            
        // }
 
@@ -156,4 +147,13 @@ class PersediaanController extends Controller
 
         return view('persediaan.view', compact('tablePersediaan'));
     }
+
+    public function test(){
+
+        $tablePersediaan = NilaiPersediaan::all();
+
+        return view('persediaan.test');
+    }
+
+
 }

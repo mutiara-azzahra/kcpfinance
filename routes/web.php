@@ -74,6 +74,7 @@ Route::get('/perkiraan/destroy', 'PerkiraanController@destroy')->name('perkiraan
 Route::get('/persediaan/filter', 'persediaanController@filter')->name('persediaan.filter');
 Route::get('/persediaan/process', 'persediaanController@process')->name('persediaan.process');
 Route::get('/persediaan/view', 'persediaanController@getPersediaan')->name('persediaan.view');
+Route::get('/persediaan/test', 'persediaanController@test')->name('persediaan.test');
 
 //NeracaSaldoController
 Route::get('/neraca-saldo/index', 'NeracaSaldoController@index')->name('neraca-saldo.index');

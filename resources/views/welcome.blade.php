@@ -90,9 +90,6 @@
             </a>
           </li>
           <li class="nav-item">
-            <!-- <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-              <i class="fas fa-th-large"></i>
-            </a> -->
             <a class="nav-link" href="{{ Route('login.logout')}}" class="nav-link"><i class="fas fa-arrow-right"></i></a>
           </li>
 
@@ -136,7 +133,7 @@
 
           <!-- Sidebar Menu -->
           <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false  ">
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <p>
@@ -230,7 +227,6 @@
                         </p>
                       </a>
                     </li>
-
                     <li class="nav">
                       <a class="nav-link" href="{{ Route('persediaan.filter')}}" class="nav-link">
                         <p>
@@ -239,14 +235,7 @@
                         </p>
                       </a>
                     </li>
-
-                    <!-- <li class="nav">
-                      <a class="nav-link" href="{{ Route('login.logout')}}" class="nav-link"><i class="fas fa-arrow-right"></i>
-                        <p>Logout</p>
-                      </a>
-                    </li> -->
                 </ul>
-                
               </li>
             </ul>
           </nav>
